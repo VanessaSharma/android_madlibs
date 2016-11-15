@@ -29,7 +29,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/locationEditText"
+        android:id="@+id/usernameEditText"
         android:background="@color/colorTextIcons"
         android:layout_above="@+id/madLibsButton"
         android:layout_marginBottom="10dp"
@@ -42,16 +42,9 @@
         android:layout_height="wrap_content"
         android:text="Play!"
         android:id="@+id/madLibsButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
-        android:textColor="@color/colorTextIcons" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/usernameEditText"
-        android:layout_above="@+id/madLibsButton"
+        android:textColor="@color/colorTextIcons"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

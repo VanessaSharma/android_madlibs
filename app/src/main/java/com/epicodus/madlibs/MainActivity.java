@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = MainActivity.class.getSimpleName();
     private Button mMadLibsButton;
     private EditText mUsernameEditText;
 
@@ -19,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mUsernameEditText = (EditText) findViewById(R.id.usernameEditText);
         mMadLibsButton = (Button) findViewById(R.id.madLibsButton);
-        mMadLibsButton.setOnClickListener(new View.OnClickListener() {
 
+        mMadLibsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String location = mUsernameEditText.getText().toString();
-                Log.d(TAG, location);
+                String username = mUsernameEditText.getText().toString();
                 Intent intent = new Intent(MainActivity.this, MadLibsActivity.class);
+                intent.putExtra("username", username);
                 startActivity(intent);
             }
         });
